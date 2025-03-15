@@ -1,109 +1,81 @@
-Here's the `README.md` file without code but with complete steps and Git clone instructions:
+# **Classification of Metals and Plastics using CNN**  
+
+## 📌 Project Overview  
+This project presents a **Convolutional Neural Network (CNN)** designed for the classification of **metals and plastics** from image data. The model is developed using **TensorFlow and Keras**, leveraging advanced deep learning techniques to achieve high classification accuracy.  
 
 ---
 
-# Classification of Metals and Plastics using CNN
+### This work has been **successfully published** as a **research paper**:  
 
-This project involves the development of a Convolutional Neural Network (CNN) to classify images of metals and plastics. The model is trained on a dataset of labeled images and achieves high accuracy in distinguishing between the two classes.
+📄 **A Novel Approach for Classification of Metals and Plastics under the Methodology of Deep Learning using Convolutional Neural Networks** 🔗 [IEEE Xplore – Read the Paper](https://ieeexplore.ieee.org/abstract/document/10307663)  
 
-## Project Overview
+## **Abstract:**  
+This research introduces a fully **automated solution** for waste segregation in the recycling process. The primary challenge in recycling is the **classification and separation** of materials, specifically plastics and metals. Our proposed CNN-based model efficiently categorizes waste materials, ensuring seamless classification with high accuracy.  
 
-This repository contains the code to build, train, and evaluate a CNN model using TensorFlow and Keras. The model is designed to classify images into two categories: metals and plastics. The project leverages several key machine learning and image processing techniques to achieve this classification.
+The system enables real-time classification, storing results in a structured format for further analysis. By leveraging **Deep Learning Neural Networks**, the model enhances the **efficiency and accuracy** of material segregation, reducing human effort, optimizing resource allocation, and contributing to **environmental sustainability**. The study demonstrates the effectiveness of **CNN-based classification** for waste management, offering a scalable and deployable solution for recycling industries.  
 
-## Goals
+---
 
-- Develop an accurate CNN model to classify metals and plastics from images.
-- Utilize TensorFlow and Keras libraries to implement the model.
-- Achieve a high accuracy rate for the classification task.
-- Provide a reusable and scalable solution for similar image classification problems.
+## 🔍 **Process**  
 
-## Process
+### **1. Data Preparation**  
+- Images are preprocessed and normalized for CNN training.  
+- Labels are extracted and mapped to images for supervised learning.  
 
-1. **Data Preparation**:
-    - Images are preprocessed and normalized to ensure they are suitable for training the CNN.
-    - Labels are extracted and associated with the images to facilitate supervised learning.
+### **2. Model Development**  
+- Developed using **Keras Sequential API**, comprising multiple **convolutional layers**, activation functions, pooling layers, and dense layers.  
 
-2. **Model Development**:
-    - A sequential model is constructed using Keras, consisting of multiple convolutional layers, activation functions, pooling layers, and dense layers.
+### **3. Training and Evaluation**  
+- The model is trained with **batch processing** and optimized hyperparameters.  
+- Performance is measured using **validation metrics** and **accuracy scores**.  
 
-3. **Training and Evaluation**:
-    - The model is trained on the prepared dataset with a specified batch size and number of epochs.
-    - Performance is evaluated using accuracy metrics and validation data.
+### **4. Model Persistence**  
+- The trained model is stored in **H5 format** for efficient deployment and scalability.  
 
-4. **Saving the Model**:
-    - The trained model is saved in H5 format for future use.
+---
 
-## Features
+## ✨ **Features**  
 
-- **Convolutional Layers**: Utilizes multiple convolutional layers with ReLU activation functions and max pooling for feature extraction.
-- **Dense Layers**: Includes dense layers for classification, with a sigmoid activation function in the output layer for binary classification.
-- **TensorBoard Integration**: Tracks and visualizes the training process using TensorBoard.
-- **Data Normalization**: Normalizes image data to enhance model performance.
-- **Model Persistence**: Saves the trained model in H5 format for easy deployment and reuse.
+- **Convolutional Layers** – Extracts features using **ReLU activation** and **max pooling**.  
+- **Dense Layers** – Uses **sigmoid activation** for binary classification.  
+- **TensorBoard Integration** – Monitors and visualizes model training.  
+- **Data Normalization** – Scales image data for improved learning efficiency.  
+- **Model Storage** – Saves the trained model in **H5 format** for reuse.  
 
-## Getting Started
+---
 
-To get a local copy up and running follow these simple steps.
+## 🛠 **Tech Stack**  
 
-### Prerequisites
+- **Programming Language:** Python  
+- **Deep Learning Frameworks:** TensorFlow, Keras  
+- **Data Handling:** NumPy, Pickle  
+- **Model Storage:** H5 format  
 
-- Python 3.x
-- TensorFlow
-- Keras
-- NumPy
+---
+
+## 📂 **Project Structure**  
+```
+classification-using-cnn/
+├── Cam.py                # Real-time classification script  
+├── Loading.py            # Dataset loading and preprocessing  
+├── MPmodel.h5            # Trained CNN model  
+├── README.md             # Project documentation  
+├── Testing.py            # Model evaluation script  
+├── Training.py           # Model training script  
+├── Training_JL.ipynb     # Jupyter Notebook for model training  
+├── X.pickle              # Preprocessed feature data  
+├── y.pickle              # Preprocessed labels  
+└── logs/                 # TensorBoard logs for training visualization  
+```  
+
+---
+
+## 🚀 **Getting Started**  
+
+### **Prerequisites**  
+Ensure the following dependencies are installed:  
+- Python 3.x  
+- TensorFlow  
+- Keras  
+- NumPy  
 - Pickle
-
-### Installation
-
-1. Clone the repo
-
-   ```sh
-   git clone https://github.com/er-anubhavgoel/ClassificationUsingCNN.git
-   ```
-
-2. Navigate to the project directory
-
-   ```sh
-   cd ClassificationUsingCNN
-   ```
-
-3. Install the required packages
-
-   ```sh
-   pip install -r requirements.txt
-   ```
-
-4. Prepare your dataset and place the image data files (`X.pickle` and `y.pickle`) in the project directory.
-
-### Usage
-
-1. Train the model
-
-   ```sh
-   python train_model.py
-   ```
-
-2. Evaluate the model
-
-   ```sh
-   python evaluate_model.py
-   ```
-
-3. The trained model will be saved as `MPmodel.h5`.
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-Anubhav Goel  
-Email: anubhavgoel0520@hotmail.com  
-LinkedIn: [Anubhav Goel](https://linkedin.com/in/er-anubhavgoel)  
-GitHub: [er-anubhavgoel](https://github.com/er-anubhavgoel)  
-
-GitHub Repository: [ClassificationUsingCNN](https://github.com/er-anubhavgoel/ClassificationUsingCNN)
